@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="#ebecf0"/>
+    <item android:state_selected="true" android:color="#ebecf0"/>
+    <item android:color="#fffffb"/>
+</selector>
+ -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/list_cache_color_hint" android:state_pressed="false"/>
+    <item android:drawable="@color/holo_blue_light" android:state_pressed="true"/>
+</selector>

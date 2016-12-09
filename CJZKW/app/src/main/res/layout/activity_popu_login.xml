@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dip"
+        android:text="提示"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/textview"
+        android:layout_marginTop="3dip"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin"
+        android:layout_below="@+id/view">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="您还没有登录..."
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="0dip"
+            android:layout_height="35dip"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bt_back"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_setting"
+            android:layout_width="0dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bt_set"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

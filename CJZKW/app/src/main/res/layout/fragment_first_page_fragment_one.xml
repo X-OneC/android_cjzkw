@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9e7eb"
+    android:orientation="vertical"
+    tools:context="com.android.cjzk.fragment.FirstPageFragmentOne">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rel01"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp">-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rel_seek"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/seek_bg">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_toLeftOf="@+id/im"-->
+                <!--android:text="搜索请输入股票代码，关键字等"-->
+                <!--android:textColor="#33000000" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/im"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:background="@mipmap/seek_bg" />-->
+        <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <include
+        layout="@layout/layout_refresh_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="?android:colorPrimary"
+        android:indeterminateTintMode="src_in" />
+</RelativeLayout>

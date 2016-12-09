@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.android.cjzk"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 7
+        versionName "1.7.0"
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    buildTypes {
+//        release {
+//            minifyEnabled false
+//            signingConfig signingConfigs.debug
+////            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//        debug {
+//            minifyEnabled false
+//            signingConfig signingConfigs.debug
+//            parameterTypes 'proguard-rules.pro'
+//        }
+        release {
+            // 是否进行混淆
+            minifyEnabled true
+            // 混淆文件的位置
+            signingConfig signingConfigs.debug
+            proguardFiles 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled true
+            signingConfig signingConfigs.debug
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('key')
+            storePassword "SHCJZKW"
+            keyAlias "caijingzhikuwang"
+            keyPassword "SHCJZKW"
+        }
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    compile project(':loopview')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.kevin:wraprecyclerview:1.0.6'
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.3'
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.linsea:universalvideoview:1.1.0@aar'
+    compile project(':onekeyshare')
+    compile project(':PushSDK')
+}
+//    compile 'io.reactivex:rxjava:1.1.5'
+//    compile 'io.reactivex:rxandroid:1.2.0'
+//    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
+//    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.4.0'
+//    compile 'com.jakewharton.rxbinding:rxbinding-design:0.4.0'
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+//    compile 'com.zjutkz:PowerfulRecyclerView:1.0.0'
+//    compile 'com.kevin:loopview:1.0.9'
+//    compile project(':StickyHeadlibrary')
+

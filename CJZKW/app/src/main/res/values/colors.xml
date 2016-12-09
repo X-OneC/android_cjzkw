@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3e64af</color>
+    <color name="colorPrimaryDark">#3e64af</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="c">#ffffff</color>
+
+    <color name="color_ff">#F0F0F0</color>
+    <color name="color_00">#8A000000</color>
+    <color name="list_cache_color_hint">#00000000</color>
+    <color name="holo_blue_light">#ebecf0</color>
+    <color name="text_color">#ffffff</color>
+    <drawable name="btgb">#00000000</drawable>
+    <color name="text_time">#b1b1b2</color>
+    <color name="StatusBarColor">#000000</color>
+</resources>
